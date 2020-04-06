@@ -1,0 +1,10 @@
+name: test
+on: [issue_comment]
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the comment
+        run: echo $github.event.comment.body
